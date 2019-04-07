@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/assets/images/favicon.ico" rel="shortcut icon" />
+    <!-- JS FILES -->
+    <script type="text/javascript" src="~/assets/js/jquery-1.20.2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/modernizr.custom.js"></script>
+    <script src="~/Scripts/thumbnail-slider.js"></script>
+    <script src="~/assets/js/jquery.dlmenu.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/modernizr.custom.js"></script>
+    <!-- CSS FILES -->
+    <link href="~/assets/css/style.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/responsive.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="~/Scripts/thumbnail-slider.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top_line">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 pull-left">
+                            <ul class="contact-top">
+                                <li><i class="icon-location"></i> 455 Martinson, Los Angeles</li>
+                                <li><i class="icon-mobile"></i> 8 (043) 567 - 89 - 30</li>
+                                <li><i class="icon-mail"></i> support@Email.com</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-5 pull-right hidden-phone">
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-LinkedIn"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                                <li id="search-btn"><a href="#"><i class="icon-search"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page_head">
+            <div class="nav-container" style="height: auto;">
+                <nav>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="logo">
+                                    <img src="~/assets/img/Robert.png" alt="PowerMascot">
+                                </div>
+                            </div>
+                            <div class="col-lg-9 pull-right">
+                                <div class="menu">
+                                    <div id="dl-menu" class="dl-menuwrapper">
+                                        <button class="dl-trigger">Open Menu</button>
+                                        <ul class="dl-menu">
+                                            <li class="current">
+                                                @Html.ActionLink("Home" , "ViewAllJobPostings" , "JobApp")
+
+                                            </li>
+                                            <li>
+                                                <a href="#">About Us</a>
+                                                <ul class="dl-submenu">
+
+                                                    <li><a href="#about">Services</a></li>
+                                                    <li><a href="#contact">Contact</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#careers">Careers</a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--#region carousel-->
+                    <div class="col-lg-12">
+                        <div style="padding:120px 0;">
+                            <div id="thumbnail-slider">
+                                <div class="inner">
+                                    <ul>
+                                        <li>
+                                            <a class="thumb" href="~/Images/brick.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/brown.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/cabin.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/four.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/inside.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/large.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/lights.jpg"></a>
+                                        </li>
+                                        <li>
+                                            <a class="thumb" href="~/Images/one.jpg"></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end-->
+                    </div>
+                    <!--#endregion-->
+                </div>
+            </div>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="promo-text-footer">Get in Touch</div>
+                        <ul class="contact-footer">
+                            <li><i class="icon-location"></i> Adress: 455 Martinson, Los Angeles</li>
+                            <li><i class="icon-mobile"></i> Phone: (425) 235-1106</li>
+                            <li><i class="icon-videocam"></i> Skype: companyname</li>
+                            <li><i class="icon-mail"></i> E-mail: support@Email.com</li>
+                            <li><i class="icon-key"></i> Weekend: from 9 am to 6 pm</li>
+                        </ul>
+                        <ul class="soc-footer">
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-tumblr-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-LinkedIn-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-ms-12 pull-left">
+                            <div class="copyright">Copyright © 2018 <a href="#">Christy Hernandez</a>></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script type="text/javascript" src="~/assets/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+        <script type="text/javascript" src="~/assets/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="~/assets/js/waypoints.min.js"></script>
+        <script type="text/javascript" src="~/assets/js/sticky.js"></script>
+        <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/assets/js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="~/assets/js/retina.js"></script>
+        <script type="text/javascript" src="~/assets/js/testimonialrotator.js"></script>
+        <script type="text/javascript" src="~/assets/js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="~/assets/js/jquery.cubeportfolio.min.js"></script>
+        <script type="text/javascript" src="~/assets/js/portfolio-0.js"></script>
+        <script type="text/javascript" src="~/assets/js/jcarousel.responsive.js"></script>
+        <script type="text/javascript" src="~/assets/js/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript" src="~/assets/js/jquery.dlmenu.js"></script>
+        <script type="text/javascript" src="~/assets/js/main.js"></script>
+</body>
+</html>

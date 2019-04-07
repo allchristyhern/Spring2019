@@ -1,0 +1,88 @@
+﻿@model IEnumerable<GetJobsv3.Models.Job>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreferredSkills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EoeMessage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastEditedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastEditedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumeRequired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Delete_flag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredSkills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EoeMessage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastEditedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastEditedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumeRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Delete_flag)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.jobID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.jobID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.jobID })
+        </td>
+    </tr>
+}
+
+</table>

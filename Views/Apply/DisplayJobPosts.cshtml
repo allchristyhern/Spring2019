@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GetJobsv3.Models.Job>
+
+<link href="~/assets/css/style.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="service-name">Job Openings</div>
+            <table class="table table-responsive table-bordered">
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td class="service-text">
+                            @Html.DisplayFor(modelItem => item.JobTitle)
+                        </td>
+
+
+                        <td>
+                            @Html.ActionLink("Details" , "Details" , new { id = item.jobID })
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
+

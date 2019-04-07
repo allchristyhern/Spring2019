@@ -1,0 +1,41 @@
+﻿@model GetJobsv3.Models.Job
+@{
+    ViewBag.Title = "Powers Painting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h4> @Html.DisplayFor(model => model.JobTitle)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredSkills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredSkills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EoeMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EoeMessage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List" , "ViewAllJobPostings")
+
+    @Html.ActionLink("Apply for Job" , "Apply")
+</p>
